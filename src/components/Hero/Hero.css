@@ -1,0 +1,158 @@
+.h-wrapper{
+    background-color: rgb(203, 203, 203); /* var(--primary-color); */
+    height: 120vh;
+    overflow: hidden;
+}
+
+.h-wrapper .container{
+    padding-top: 8rem;
+
+}
+
+/* Imagen Arrow */
+.h-arrow{
+    position:absolute;
+    top: 10rem;
+    width: 100%;
+    max-width: 60rem;
+    z-index: 0;
+
+    
+    opacity: 0.12; /* Ajusta la opacidad para que sea casi transparente */
+    right: -15%;
+    
+}
+
+.h-container{
+    display: flex;
+    height: 80vh; /* GPT ME INDICA mejorarlo con auto */
+    align-items:center;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+/* Left Side Styling */
+.h-left{
+    flex:1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 5rem;
+}
+.image-row{
+    display: flex;
+    gap: 2rem;
+}
+.person-pill{
+    height: 15rem;
+    width: 6rem;
+    border-radius: 999px; 
+    overflow: hidden;
+
+    box-shadow: 30px 8px 10px rgba(0, 0, 0, 0.1); /* Ajusta los valores para conseguir el efecto deseado */
+    border: 4px solid rgba(255, 255, 255, 0);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+    
+}
+.person-pill:hover {
+     transform: scale(1.05); /* Aumenta ligeramente el tamaño  */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */  
+
+    
+
+}
+
+
+.person-pill-bg{
+    border-radius: 999px; /* 15rem 15rem 0 0; */ 
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.person-pill-bg > img{
+    width: 100%;
+    object-fit: cover;
+    scale: 2;
+    margin-top: 4rem;
+}
+.image-row > :nth-child(2){
+    transform: translateY(-4rem);
+}
+
+
+
+
+
+
+/* Right Side Styling */
+.h-right{
+    flex: 1;  /*1.25 él*/
+    display: flex;
+    flex-direction: column;
+    gap: rem;
+}
+
+.h-title{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color:  #000000;/* var(--third-color); */
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+
+}
+
+.h-title > :nth-child(1){
+    color: rgb(228, 0, 0); /* white; */
+}
+
+.h-des{
+    color: black;/* white; */
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 1024px){
+    .h-wrapper{
+        height: max-content;
+    }
+    .h-wrapper .container{
+        padding-top: 5rem;
+
+    }
+    .h-container{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        padding-bottom: 3rem;
+    }
+    .h-arrow{
+        display: none;
+    }
+    .h-right{
+        flex: 1;
+        align-items: center;
+    }
+    .h-title{
+        align-items: center;
+        font-size: 2.2rem;
+    }
+    .h-des{
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: center;
+    }
+}

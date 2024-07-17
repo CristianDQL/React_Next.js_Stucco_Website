@@ -1,0 +1,197 @@
+
+/*MODIFICAR COLOR DE MORADO A blanco del Navbar------------*/
+.n-wrapper{
+    background-color: rgb(203, 203, 203);/* var(--primary-color); */ /*Color predefinidio en global.css*/
+    width: 100%;
+    position: absolute;
+    z-index: 999; 
+
+}
+
+/* Sticky menu - menú móvil */
+.sticky{
+    position: fixed;
+    box-shadow: 10px 12px 48px rgba(181, 187, 203, .206);
+    background: white;
+    top: 0;
+}
+
+
+
+
+.n-container{
+    padding: 1.5rem 1rem;
+    color: black;/* white; */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+
+}
+
+/* Continuación sticky menu */
+.sticky .n-container{
+    color: var(--title-color);
+    padding: 1rem;
+
+}
+
+
+
+
+
+/*Navbar Desktop Version*/
+.n-logo{
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.n-logo img {
+    height: 80px; /* Ajusta esto según la altura deseada */
+    width: auto; /* Mantiene la proporción de la imagen */
+    cursor: pointer;
+}
+
+
+
+.n-right{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 0.9rem;
+}
+
+.n-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    gap: 2.5rem;
+
+}
+
+.n-menu span{
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.n-menu span:hover {
+    background-color: #00000000; /* Cambia esto según tu paleta de colores */
+    color: #E62200; /* Cambia el color del texto en hover */
+}
+
+
+
+/*Botón de Contact Us CAMBIAR NOMBRE----------
+Fondo rojo y letra blanca o negra.*/
+.fund-button{
+    color: white;/* var(--dark-bg); */
+    background-color:  #E62200; /* var(--third-color); */
+    padding: 1rem 1.6rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 999px;
+
+}
+
+/*Navbar Mobile Version*/
+
+.nm-container{
+    display: none;
+
+}
+
+/* lÍNEA BLANCA 
+.container hr{
+    border-color: #000000; var(--border-color-light); 
+    width: 100%;
+} */
+
+
+/*Si reduce a versión Mobile, oculra también la Desktop*/
+@media (max-width: 1200px){
+    .n-container{
+        display: none;
+    }
+    .nm-container{
+        display: block;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        position: relative;
+        background-color: rgb(203, 203, 203);/* var(--primary-color); */
+        
+    }
+
+    .nm-container>:nth-child(1){ /*Afecta al primer child de ese contenedor*/
+        font-weight: bold;
+    }
+
+    .nm-menu{
+        position: fixed;
+        top: 3.2rem;
+        padding: 3rem 2rem;
+        box-sizing: border-box;
+        left: 0;
+        display: flex;
+        background: rgb(203, 203, 203); /* var(--primary-color); */
+        flex-direction: column;
+        transform: translateX(-150%);
+        transition:all 300ms ease-in-out;
+        width: 100%;
+        font-size: 1.2rem;
+        z-index: 99;
+        height: calc(100vh - 3.9rem);/* Si da problemas, 3.2 */
+        cursor: pointer;
+    }
+
+    .nm-menu text{
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    }
+
+    .n-menu span:hover {
+        background-color: #00000000; /* Cambia esto según tu paleta de colores */
+        color: #E62200; /* Cambia el color del texto en hover */
+    }
+
+        
+        
+
+
+
+
+    /*Span del menú hamburguesa, divisiones entre submenús - CAMBIARRRRRRRRRR----*/
+    .nm-menu a{
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid black;/* var(--border-color) */;
+        
+    }
+
+    .m-funded-button{
+        width: 100%;
+        background-color: #E62200; /* var(--third-color); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 1rem 0rem;
+        border-radius: 999px;
+        color : var(--dark-bg);
+    }
+
+    
+    .nm-container img {
+        height: 30px; /* Ajusta esto según la altura deseada */
+        width: auto; /* Mantiene la proporción de la imagen */
+        cursor: pointer;
+    }
+}
+
+
+
