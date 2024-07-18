@@ -32,9 +32,12 @@
 .wwd-features {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap; /* Permite que las características se ajusten en diferentes líneas */
+    justify-content: center; /* Centra las características en el contenedor */
+
   }
   .wwd-feature {
-    flex: 1;
+    flex: 1 1 calc(20% - 2rem); /* Tres columnas con espacio entre ellas */
     background-color: white;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     display: flex;
@@ -97,24 +100,56 @@
 }
 
 @media (max-width: 990px) {
-    .wwd-blocks{
-        flex-direction: column;
+    .wwd-features {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas más pequeñas */
+    }
+    .wwd-feature {
+        flex: 1 1 100%; /* Las características ocupan el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 2rem; /* Añadir margen entre las características */
+    }
+    .wwd-support {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas más pequeñas */
     }
 }
 @media (max-width: 768px) {
-    .wwd-support{
+    .wwd-features {
         flex-direction: column;
+        gap: 1rem; /* Reduce el espacio entre características */
+    }
+    .wwd-feature {
+        flex: 1 1 100%;
+        margin-bottom: 1rem; /* Reduce el margen inferior entre características */
+    }
+    .wwd-head {
+        width: 90%; /* Aumenta el ancho de la cabecera */
+    }
+    .wwd-head .des {
+        width: 100%; /* Asegura que el texto ocupe todo el ancho */
+        padding: 0 1rem; /* Añade padding para los lados */
+        text-align: center; /* Centra el texto */
     }
 }
+
 @media (max-width: 576px) {
-    .wwd-block{
-        width: 80%;
-        margin: auto;
+    .wwd-head {
+        width: 100%; /* La cabecera ocupa todo el ancho */
+        padding: 0 1rem; /* Añade padding para los lados */
     }
-    .block-features{
+    .wwd-features {
         flex-direction: column;
+        gap: 1rem; /* Reduce el espacio entre características */
     }
-    .block-feature{
-        margin-top: 0rem!important;
+    .wwd-feature {
+        flex: 1 1 100%;
+        margin-bottom: 1rem; /* Reduce el margen inferior entre características */
+        padding: 1rem; /* Reduce el padding interno */
+    }
+    .wwd-support {
+        flex-direction: column;
+        align-items: center; /* Centra el contenido */
+        text-align: center; /* Centra el texto */
+    }
+    .wwd-support > div {
+        align-items: center; /* Centra el contenido dentro de cada div */
     }
 }
