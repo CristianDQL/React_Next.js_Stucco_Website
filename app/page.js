@@ -15,6 +15,7 @@ import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
 import Portfolio from '@/src/components/OurDiff/Portfolio';
+import AboutUs from '@/src/components/AboutUs/AboutUs';
 
 export default function Home() {
 
@@ -47,7 +48,7 @@ export default function Home() {
       </motion.div>
 
 
-      <HowItWorks/>
+      <AboutUs/>
 
       {/* Cambio de color a morado seccion WWI */}
       <motion.div
