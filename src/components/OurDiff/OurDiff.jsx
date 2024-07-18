@@ -33,6 +33,7 @@ const OurDiff = () => {
           </div>
 
           {/* Feature section */}
+          {/* uTILIZO SERVICEDATA CAMBIAR IMAGENES, MANTENER ESTRUCTURA CON TITULO ETC */}
           <div className="od-features">
             {duplicatedData.map((item, index) => (
               <motion.div

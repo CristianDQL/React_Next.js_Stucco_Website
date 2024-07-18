@@ -18,10 +18,10 @@
     align-items: center;
 }
 .od-head .tag {
-    color: #fff;
+    color: #E62200;
 }
 .od-head .title {
-    color: #fff;
+    color: #000000;
     text-align: center;
     max-width: 75%;
 }
@@ -118,10 +118,19 @@
     .od-features {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .od-head .title {
+        max-width: 100%; /* Aseguramos que el texto se ajusta a la pantalla */
+    }
+
 }
 
 @media (max-width: 768px) {
     .od-features {
         grid-template-columns: 1fr;
+    }
+
+    .od-head .tag, .od-head .title {
+        text-align: center; /* Aseguramos el centrado en pantallas pequeñas */
     }
 }
