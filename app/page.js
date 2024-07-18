@@ -54,7 +54,7 @@ export default function Home() {
       <motion.div
         onViewportEnter={() =>
           controls.start({
-            backgroundColor: "var(--primary-color)",
+            backgroundColor: "rgb(203, 203, 203)",
           })
         }
         onViewportLeave={() =>
@@ -64,10 +64,10 @@ export default function Home() {
         }
         viewport={{amount: 0.4}} /* cantidad de pantalla vista para comenzar animación */
       >
-        <WhoWeInvest/>
+        <Testimonials/>
       </motion.div>
       
-      <Testimonials/>
+      <HowItWorks/>
 
       <Footer/>
 
