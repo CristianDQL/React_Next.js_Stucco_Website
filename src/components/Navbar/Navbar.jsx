@@ -48,20 +48,20 @@ const Navbar = () => {
                         <span>Contact Us </span> */}
 
                         <Link to="wwd-wrapper" spy={true} smooth={true}>
-                            <span>Services</span>
+                            <span>HOME</span>
                         </Link>
                         <Link to="hiw-wrapper" spy smooth offset={100}>
-                            <span>Portfolio</span>
+                            <span>SERVICES</span>
                         </Link>
                         <Link to="wwi-wrapper" spy smooth >
-                            <span>Details</span>
+                            <span>PORTFOLIO</span>
                         </Link>
                         <Link to="t-wrapper" spy smooth offset={100}>
-                            <span>Contact Us </span>
+                            <span>DETAILS </span>
                         </Link>
                         
                     </div>
-                    <div className="fund-button">Get Funded</div>
+                    <div className="fund-button">CONTACT US</div>
                 </div>
 
                 
@@ -97,7 +97,7 @@ const Navbar = () => {
                     spy={true}
                     smooth={true}
                 >
-                    <span>Services</span>
+                    <span>HOME</span>
                 </Link>
                 <Link
                     onClick={() => setMobileMenuOpened(false)}
@@ -106,7 +106,7 @@ const Navbar = () => {
                     smooth
                     offset={100}
                 >
-                    <span>Portfolio</span>
+                    <span>SERVICES</span>
                 </Link>
                 <Link 
                     onClick={() => setMobileMenuOpened(false)}
@@ -114,7 +114,7 @@ const Navbar = () => {
                     spy
                     smooth
                 >
-                    <span>Details</span>
+                    <span>PORTFOLIO</span>
                 </Link>
                 <Link
                     onClick={() => setMobileMenuOpened(false)}
@@ -125,7 +125,7 @@ const Navbar = () => {
                 >
                     <span>Contact Us</span>
                 </Link>
-                <div className="m-funded-button">Get Funded</div>
+                <div className="m-funded-button">Contact Us</div>
 
 
 
