@@ -1,37 +1,68 @@
-.emailBox{
-    background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 999px;
+.emailBox {
     display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
     align-items: center;
-    width: 70%;
-    position: relative;
-    overflow: hidden;
+    width: auto; /* Ajusta el ancho según el contenido */
+    margin: 0; /* Elimina cualquier margen */
 }
 
-.emailBox>input{
-    outline: none ;
-    border: none;
-    margin-left: 1rem;
-    font-size: 1rem;
-    color: rgb(150,150,150);
-    font-family: '__Josefin_Sans_9583da', '__Josefin_Sans_Fallback_9583da';
-    flex: 1;
-}
-
-.emailBox>input::placeholder{
-    font-size: 0.8rem;
-}
-
-.getFunded{
-    position: absolute;
-    right: 0.5rem;
-    height: 80%;
-    background-color:  #E62200; /* var(--secondary-color); */
+.getFunded {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 2rem;
-    border-radius: 999px;
+    background-color: #E62200; /* var(--secondary-color); */
     color: white;
+    padding: 1rem 3rem;
+    border-radius: 999px;
+    cursor: pointer; /* Cambiar el cursor a pointer */
+    transition: background-color 0.5s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Añadir transición para la animación */
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    margin-left: 0; /* Asegura que no haya margen izquierdo */
 }
+
+.getFunded:hover {
+    background-color: #650100; /* Un tono más claro o diferente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    transform: translateY(-2px); /* Eleva el botón ligeramente */
+    color: #ffffff; /* Mantén el color del texto o cámbialo si es necesario */
+}
+
+.arrowIcon {
+    margin-left: 10px;
+    animation: slide 1s infinite;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .getFunded {
+        padding: 0.8rem 2rem; /* Reduce el padding para pantallas más pequeñas */
+        font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    }
+    .arrowIcon {
+        margin-left: 8px; /* Ajusta el margen de la flecha */
+    }
+}
+
+@media (max-width: 576px) {
+    .getFunded {
+        padding: 0.6rem 1.5rem; /* Reduce aún más el padding para pantallas muy pequeñas */
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+    }
+    .arrowIcon {
+        margin-left: 5px; /* Ajusta el margen de la flecha */
+    }
+}
+
+

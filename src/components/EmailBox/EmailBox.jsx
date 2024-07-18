@@ -1,9 +1,8 @@
 import React from 'react'
 import './EmailBox.css'
-import {LuMail} from 'react-icons/lu'
-import {motion} from "framer-motion"
-import { containerVariants } from '@/src/utils/animation'; 
-
+import { motion } from 'framer-motion'
+import { containerVariants } from '@/src/utils/animation'
+import { FaArrowRight } from 'react-icons/fa'
 
 const EmailBox = () => {
   return (
@@ -13,7 +12,7 @@ const EmailBox = () => {
         borderRadius: "100%"
       }}
       whileInView={{
-        width: "70%",
+        width: "50%", // Ajusta el tamaño según sea necesario
         borderRadius: "999px",
         transition: {
           type: "easeOut",
@@ -22,41 +21,18 @@ const EmailBox = () => {
       }}
       className="emailBox"
     >
-
-        {/* Icon */}
-        <motion.div
-          variants={containerVariants(0.6)}
-          initial="offscreen"
-          whileInView={"onscreen"}
-          viewport={{ once: true }} /* La animación solo aparece una vez al cargar pag */
-
-        >
-            <LuMail size={30} color='grey'/>
-        </motion.div>
-
-        {/* Input */}
-        <motion.input
-          variants={containerVariants(0.7)}
-          initial="offscreen"
-          whileInView={"onscreen"}
-          viewport={{ once: true }}
-          type='email'
-          placeholder='Enter Email'
-        />
-
-        {/* Get Funded Button */}
+        {/* Get Started Button */}
         <motion.div 
           variants={containerVariants(0.9)}
           initial="offscreen"
           whileInView={"onscreen"}
           viewport={{ once: true }}
-          
-          className="getFunded">
-              Get Started
+          className="getFunded"
+        >
+              Get Started <FaArrowRight className="arrowIcon" />
         </motion.div>
-
     </motion.div>
-  );
-};
+  )
+}
 
 export default EmailBox
