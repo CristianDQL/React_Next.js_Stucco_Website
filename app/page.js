@@ -14,6 +14,7 @@ import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
 import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
+import Portfolio from '@/src/components/OurDiff/Portfolio';
 
 export default function Home() {
 
@@ -42,7 +43,7 @@ export default function Home() {
         }
         viewport={{amount: 0.4}} /* cantidad de pantalla vista para comenzar animación */
       >
-        <OurDiff/>
+        <Portfolio/>
       </motion.div>
 
 
