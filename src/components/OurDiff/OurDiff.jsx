@@ -1,80 +1,75 @@
-import React from 'react'
-import './OurDiff.css'
-import { ourDiffFeatures } from '@/src/utils/data'
-import Image from 'next/image'
-import { motion } from "framer-motion";
+import React from 'react';
+import './OurDiff.css';
+import { serviceData } from '@/src/utils/data'; // Usamos serviceData como fuente de datos
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { containerVariants, desVariants, tagVariants, titleVariants } from '@/src/utils/animation';
 
 const OurDiff = () => {
+  const duplicatedData = [...serviceData, ...serviceData]; // Duplicamos las tarjetas
+
   return (
-
     <div className="od-wrapper">
-        <div className="container">
-            <div className="od-container">
+      <div className="container">
+        <div className="od-container">
+          {/* Head */}
+          <div className="od-head">
+            <motion.span
+              variants={tagVariants}
+              initial="offscreen"
+              whileInView={"onscreen"}
+              className='tag'
+            >
+              Our Selected Projects
+            </motion.span>
+            <motion.span
+              variants={titleVariants}
+              initial="offscreen"
+              whileInView={"onscreen"}
+              className='title'
+            >
+              We are ready to scale up your business with our great work result.
+            </motion.span>
+          </div>
 
-                {/* Head */}
-                <div className="od-head">
-                    <motion.span 
-                        variants={tagVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"}                    
-                        className='tag'
-                    >
-                        Our Difference
-                    </motion.span>
-                    <motion.span 
-                        variants={titleVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"} 
-                        className='title'
-                    >
-                        Fair capital, hassle free
-                    </motion.span>
-                    <motion.span 
-                        variants={desVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"} 
-                        className='text'
-                    >
-                        {" "}
-                        Our mission is to level the playing field early stage growth
-                        capital.
-                        <br/> We provide capital that is unbiased, flexible and non 
-                        dilutive with the execution support to accelerate value creation.
-                    </motion.span>
+          {/* Feature section */}
+          <div className="od-features">
+            {duplicatedData.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={containerVariants((index + 1) * 0.1)}
+                initial="offscreen"
+                whileInView={"onscreen"}
+                whileHover={{ scale: 1.05 }} /* Adding motion hover effect */
+                className="od-feature"
+              >
+                <div className="project-card">
+                  <Image
+                    src={item.icon}
+                    alt="Portfolio"
+                    className="project-image"
+                    width={150} // Reducimos el tamaño de la imagen
+                    height={100} // Reducimos el tamaño de la imagen
+                  />
+                  <div className="project-info">
+                    <h3 className="project-title">{item.title}</h3>
+                    <p className="project-category">{item.des.substring(0, 30)}...</p> {/* Reducimos el texto */}
+                  </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
 
-
-                {/* Feature section */}
-                <div className="od-features">
-                    {ourDiffFeatures.map((feature, i) => (
-                        <motion.div 
-                            key={i}
-                            variants={containerVariants((i + 1) * 0.1)} /* delay */
-                            initial="offscreen"
-                            whileInView={"onscreen"}
-                            className="od-feature"  >
-                            <Image
-                                src={feature.icon}
-                                alt="feature"
-                                width={128}
-                                height={128}
-                            />
-                            <span className='sec-title'>{feature.title}</span>
-                            <span className='text'>{feature.des}</span>
-                        </motion.div>
-                    ))}
-                </div>
-
-
-
-            </div>
+          <div className="see-more-container">
+            <button className="see-more-button">
+              See More <span className="arrow-icon">{">>"}</span>
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-
-
-
-  )
+  );
 }
 
 export default OurDiff
+
