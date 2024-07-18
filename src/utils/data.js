@@ -154,18 +154,18 @@ export const testimonialsData = [
 /* sERVICES - copiado de OURDIFF*/
 export const serviceData = [
   {
-    icon: "/OurDiff/Frame-0.png",
-    title: "Data Driven",
+    icon: "/Services/4.png",
+    title: "Stucco Repair",
     des: "Our mission is to level the playing field for early stage growth capital. We provide capital that is unbiased, flexible and non dilutive with the execution support to accelerate value creation",
   },
   {
-    icon: "/OurDiff/Frame-1.png",
-    title: "flexible funding",
+    icon: "/Services/4.png",
+    title: "Re-Stucco",
     des: "Funding that flexes as revenue grows with transparent costs and does not require dilution, personal guarantees or pitch decks",
   },
   {
-    icon: "/OurDiff/Frame-2.png",
-    title: "value accelerating",
+    icon: "/Services/4.png",
+    title: "Stucco Patching",
     des: "On demand expertise to supercharge growth in areas that are hard to access for early stage founders",
   },
 ];

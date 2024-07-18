@@ -26,7 +26,7 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <BrandingVideo/> 
-      <WhatWeDo/>
+      <WhatWeDo/> {/* Service */}
 
       {/* MODIFICAR cambio de color entre secciones, a rojo? */}
       <motion.div

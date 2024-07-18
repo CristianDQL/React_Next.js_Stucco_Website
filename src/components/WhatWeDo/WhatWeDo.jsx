@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './WhatWeDo.css'
-import { features } from '@/src/utils/data'
+import { features, serviceData } from '@/src/utils/data'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { desVariants, tagVariants, titleVariants, containerVariants } from '@/src/utils/animation'
@@ -26,99 +26,30 @@ const WhatWeDo = () => {
                     </motion.span>
                     <motion.span initial="offscreen" whileInView={"onscreen"} variants={titleVariants} className='title'>
                         {" "}
-                        Empowering founders with non dilutive capital and execution
-                        expertise
+                        Transforming Spaces with Premium Stucco and Expert Craftsmanship
                     </motion.span>
                     <motion.span initial="offscreen" whileInView={"onscreen"} variants={desVariants} className='des'>Here is how we can evaluate</motion.span>
                 </div>
 
-                {/* Two HOrizontal Blocks */}
-                <div className="wwd-blocks">
 
-                    {/* First Block -left */}
-                    <div className="wwd-block">
-                        <motion.span 
-                            variants={titleVariants}
+                {/* Bloque imàgenes */}
+                <div className="wwd-features">
+                    {serviceData.map((feature, i) => (
+                        <motion.div 
+                            key={i}
+                            className="wwd-feature"
+                            variants={containerVariants((i+1)*0.1)}
                             initial="offscreen"
-                            whileInView={"onscreen"}
-                         
-                            className='sec-title'
+                            whileInView="onscreen"
+                            whileHover={{ scale: 1.05 }} /* Adding motion hover effect */
                         >
-                            Blue Advances
-                        </motion.span>
-                        <motion.span 
-                            variants={desVariants}
-                            initial="offscreen"
-                            whileInView={"onscreen"}
-                                                
-                            className='text'>
-                                 Fund recurring growth expenses e.g. customer acquisition,
-                            inventory
-                        </motion.span>
+                            <Image src={feature.icon} alt={feature.title} width={250} height={250} />
+                            <span>{feature.title}</span>
+                            
+                        </motion.div>
+                    ))}
+                 </div>
 
-                        <div className="block-features"> {/* En data.js están los datos */}
-                            {
-                                features.slice(0,3).map((feature, i)=> (
-                                    <motion.div 
-                                        initial="offscreen"
-                                        whileInView={"onscreen"}
-                                        variants={containerVariants((i+1)*0.1)}
-                                        
-                                        className='block-feature' key={i}
-                                    >
-                                        <Image 
-                                            src={feature.icon}
-                                            alt="feature"
-                                            width={60}
-                                            height={60}
-                                        />
-                                        <span>{feature.title}</span>
-                                    </motion.div>
-                                ))
-                            }
-                        </div>
-
-                    </div>
-
-                    {/* Second block- right */}
-                    <div className="wwd-block"> 
-                    <motion.span 
-                        variants={titleVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"}
-                    
-                        className='sec-title'>Blue Seed</motion.span>
-                        <motion.span 
-                            variants={desVariants}
-                            initial="offscreen"
-                            whileInView={"onscreen"}
-                        
-                            className='text'>Fund one-offs to scale e.g. product, hiring
-                        </motion.span>
-
-                        <div className="block-features"> {/* En data.js están los datos */}
-                            {
-                                features.slice(3,6).map((feature, i)=> (
-                                    <motion.div 
-                                        initial="offscreen"
-                                        whileInView={"onscreen"}
-                                        variants={containerVariants((i+1)*0.1)}
-                                    
-                                        className='block-feature' key={i}
-                                    >
-                                        <Image 
-                                            src={feature.icon}
-                                            alt="feature"
-                                            width={60}
-                                            height={60}
-                                        />
-                                        <span>{feature.title}</span>
-                                    </motion.div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
 
                 {/* Support Block */}
                 <motion.div 
@@ -131,23 +62,22 @@ const WhatWeDo = () => {
 
                     {/* Left Side */}
                     <div>
-                        <span className='sec-title'>Blue Growth Support</span>
+                        <span className='sec-title'>A Full Service Stucco Company</span>
                         <span className='des'>
-                            Data Insights and full stack expertise to supercharge growth
+                        We’ve been perfecting the art of custom stucco finishes for over 20 years
                         </span>
                     </div>
 
                     {/* Right Side */}
                     <div>
                         <span className='text'>
-                        Actionable data insights by connecting revenue,
-                        marketing and social media platforms
+                        We offer a variety of stucco finishes best suited for your 
+                        residential or commercial project.
                         </span>
                         <span className='text'>
-                        On demand execution expertise at cost or revenue share 
-                        across proposition design, engineering, marketing 
-                        analytics, partnerships, brand, intellectual property,
-                         market expansion, talent management
+                        Because we are a full-service stucco company, we will help you plan
+                         your new look and execute it with a level of quality that you can take 
+                         pride in
                         </span>
                     </div>
 
