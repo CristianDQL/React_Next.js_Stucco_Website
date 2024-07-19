@@ -29,7 +29,7 @@ const EmailBox = () => {
           viewport={{ once: true }}
           className="getFunded"
         >
-              Get Started <FaArrowRight className="arrowIcon" />
+              Get Started <span className="arrow-icon">{">>"}</span>
         </motion.div>
     </motion.div>
   )

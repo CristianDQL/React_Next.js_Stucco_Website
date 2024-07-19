@@ -1,49 +1,82 @@
-.f-wrapper .container{
-    margin-top: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.f-wrapper .container {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.f-wrapper{
-    background-color: rgb(0, 0, 0);
+.f-wrapper {
+  background-color: rgb(0, 0, 0);
 }
 .f-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
-.f-container .title{
-    color: white;
-}
-.f-container .emailbox{
-    max-width: 36rem;
-}
-.f-container hr{
-    border-color: #ffffff;
-    width: 100%;
-}
-.f-menu{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap:wrap;
-}
-.f-menu span{
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: bold;
 
+.f-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.f-container .title {
+  color: white;
+}
+.f-container .emailbox {
+  max-width: 36rem;
+}
+.f-container hr {
+  border-color: #ffffff;
+  width: 100%;
+}
+.f-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.f-menu span {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add hover transition */
+}
+.f-menu span:hover {
+  color: #E62200; /* Change to desired hover color */
+}
+
+.f-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+.f-company-info, .f-office-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.info-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: white;
+  font-size: 0.8rem; /* Reduce the font size */
 }
 
 @media (max-width: 990px) {
-    .f-menu{
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
+  .f-menu {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .f-info {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
 }
-
-
-
