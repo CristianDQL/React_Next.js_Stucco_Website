@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="f-wrapper">
         <div className="container">
             <div className="f-container">
-                <span className="title">Get Funded Today!</span>
+                {/* <span className="title">Get Funded Today!</span> */}
                 <EmailBox/>
 
                 <hr/>{/* Horizontal line */}

@@ -56,7 +56,7 @@ const Portfolio = () => {
               whileInView={"onscreen"}
               className='tag'
             >
-              Our Selected Projects
+              Our Selected Stucco Projects
             </motion.span>
             <motion.span
               variants={titleVariants}

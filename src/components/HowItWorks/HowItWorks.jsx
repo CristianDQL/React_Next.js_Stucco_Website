@@ -33,7 +33,7 @@ const HowItWorks = () => {
                         whileInView={"onscreen"}
                         className='tag'
                     >
-                        How it works
+                        CONTACT US
                     </motion.span>
                     <motion.span 
                         variants={titleVariants}
@@ -41,7 +41,7 @@ const HowItWorks = () => {
                         whileInView={"onscreen"}
                         className='title'
                     >
-                        Unlocking potential along the growth journey 
+                        Ready to Schedule your Free Estimate?
                     </motion.span>
                     
                 </div>

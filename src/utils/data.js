@@ -89,18 +89,18 @@ export const hitFeatures = [
   {
     icon: "/howItWorks/Frame-0.png",
     title: "Connect",
-    des: "Register and qualify for funding in less than 5 mins. Connect revenue and marketing platforms you already use.",
+    des: "Ready for the next step in your home or commercial improvement? Contact us now to estimate and plan your stucco project.",
   },
   {
     icon: "/howItWorks/Frame-1.png",
-    title: "Get Funded",
-    des: "Get a term sheet with upto 3 funding offers. Select option that best suits and complete onboarding to receive funds in days",
+    title: "No Obligation",
+    des: "There is no obligation to purchase any of our services as every estimate is sent with no strings attached.",
   },
-  {
+  /* {
     icon: "/howItWorks/Frame-2.png",
     title: "Support Growth",
     des: "Access curated feed of actionable insights and on demand execution expertise. Auto qualify for follow on funding as you grow",
-  },
+  }, */
 ];
 
 /* Who we invest features */
