@@ -84,7 +84,7 @@ export const ourDiffFeatures = [
   },
 ];
 
-/* How it works features */
+/* CONTACT US /HOW IT WORKS features */
 export const hitFeatures = [
   {
     icon: "/howItWorks/Frame-0.png",

@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <span className="text">Made with ❤️ by Artilino</span>
+          <span className="f-creator-text">Made with ❤️ by Artilino</span>
         </div>
       </div>
     </div>

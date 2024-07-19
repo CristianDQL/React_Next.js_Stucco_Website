@@ -76,8 +76,8 @@
   margin-bottom: 0.5rem;
 }
 
-.text {
-  color: white;
+.f-creator-text {
+  color: rgb(255, 255, 255);
   font-size: 0.8rem; /* Reduce the font size */
 }
 
