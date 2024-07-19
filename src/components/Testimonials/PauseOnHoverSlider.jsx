@@ -55,8 +55,8 @@ const PauseOnHoverSlider = () => {
         >
           <div className="poh-project-card">
             <div className="poh-c-content">
-            <svg width='59' height='39' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path fill-rule='evenodd' clip-rule='evenodd' d='M13.75 24.375H0V0h25v24.375L16.25 39H5l8.75-14.625Zm20.25 0V0h25v24.375L50.25 39H39l8.75-14.625H34Z' fill='#E62200'/>
+              <svg width='59' height='39' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                <path fillRule='evenodd' clipRule='evenodd' d='M13.75 24.375H0V0h25v24.375L16.25 39H5l8.75-14.625Zm20.25 0V0h25v24.375L50.25 39H39l8.75-14.625H34Z' fill='#E62200'/>
               </svg>
               <span>{item.comment}</span>
             </div>
