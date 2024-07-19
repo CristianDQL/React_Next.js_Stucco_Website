@@ -139,13 +139,13 @@ export const testimonialsData = [
   },
   {
     comment:
-      "Another masterpiece really digging into the art of venture funds, portfolio construction and deal mechanics! Loved it - I can say without hesitation that it is incredibly valuable for anyone who is investing",
+      "Another masterpiece really digging into the art of venture funds, portfolio construction and deal mechanics! Loved it ",
     name: "Vicky R. Lane",
     profession: "Directork, Lafayette Radio",
   },
   {
     comment:
-      "BlueVenture is the premier setting for entrepreneurs and investors alike to exchange ideas, and network. As an entrepreneur, I can rely on the BlueVenture to bring top caliber speakers, entrepreneurs and investors",
+      "BlueVenture is the premier setting for entrepreneurs and investors alike to exchange ideas, and network. As an entrepreneur, I can rely on the BlueVenture. ",
     name: "Jennifer Dubois",
     profession: "Manager, China Coast",
   },
