@@ -6,21 +6,43 @@
     position: absolute;
     z-index: 999; 
 
+    margin: 0; /* Elimina cualquier margen externo por defecto */
+    
+    
+    top: 0; /* Asegura que no haya espacio extra en la parte superior */
+    
+
 }
 
 /* Sticky menu - menú móvil */
 .sticky{
     position: fixed;
-    box-shadow: 10px 12px 48px rgba(181, 187, 203, .206);
+    box-shadow: 10px 12px 48px rgba(181, 187, 203, .306);
     background: white;
     top: 0;
+
+    
+
+}
+/* Regla específica para el estado sticky */
+.sticky .n-logo img {
+    height: 150px; /* Tamaño reducido del logo en estado sticky */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+/* Reducir el tamaño del texto en estado sticky */
+.sticky .n-menu span {
+    font-size: 0.75rem; /* Reducir tamaño del texto */
+}
+/* Ajustar el botón en estado sticky */
+.sticky .fund-button {
+    padding: 0.5rem 0.8rem; /* Reducir padding del botón */
+    font-size: 0.75rem; /* Reducir tamaño del texto del botón */
 }
 
 
 
-
 .n-container{
-    padding: 1.5rem 1rem;
+    padding: 0.01rem 1rem;
     color: black;/* white; */
     font-size: 1rem;
     display: flex;
@@ -35,6 +57,8 @@
     color: var(--title-color);
     padding: 1rem;
 
+    padding: 0.01rem 1rem; /* Ajustar el padding */
+
 }
 
 
@@ -48,7 +72,7 @@
 
 }
 .n-logo img {
-    height: 300px; /* Ajusta esto según la altura deseada */
+    height: 250px; /* Ajusta esto según la altura deseada */
     width: auto; /* Mantiene la proporción de la imagen */
     cursor: pointer;
 }
@@ -95,7 +119,7 @@
     border-radius: 999px;
 
     /* transition: box-shadow 0.3s ease, transform 0.3s ease; */
-    transition: background-color 0.5s ease;
+    transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 .fund-button:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Sombra más pronunciada */
@@ -117,6 +141,7 @@
     border-color: #000000; var(--border-color-light); 
     width: 100%;
 } */
+
 
 
 /*Si reduce a versión Mobile, oculra también la Desktop*/
@@ -190,6 +215,20 @@
         width: auto; /* Mantiene la proporción de la imagen */
         cursor: pointer;
     }
+
+   /* VOY AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+    .n-logo img {
+        height: 100px; /* Tamaño reducido del logo en estado sticky */
+        width: auto; /* Mantiene la proporción de la imagen */
+
+    }
+    .sticky .n-logo img {
+        height: 50px; /* Tamaño reducido del logo en estado sticky */
+        width: auto; /* Mantiene la proporción de la imagen */
+    }
 }
+
+
+
 
 

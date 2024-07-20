@@ -34,7 +34,7 @@ const Navbar = () => {
                 {/*Dos secciones para el navbat*/}
                 {/*Left side */}
                 <div className="n-logo">
-                <img src="NavBar/logo.svg" alt="LOGO"  />
+                <img src="NavBar/optimum-stucco-services-logo.svg" alt="LOGO"  />
                 </div>
 
                 {/*Right side*/}
@@ -74,7 +74,7 @@ const Navbar = () => {
         {/*Mobile/Tab Version = nm = navbarMobile version*/}
         <div className="nm-container">
             {/*Logo*/}
-            <img src="NavBar/LOGO_1.png" alt="LOGO"  />
+            <img src="NavBar/optimum-stucco-services-logo.svg" alt="LOGO"  />
 
             {/*Menu Icon = MenuHamburguesa + cambio de estado con Hook de arriba*/}
             {!mobileMenuOpened ? (
