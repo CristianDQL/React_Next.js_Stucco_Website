@@ -34,7 +34,7 @@ const Navbar = () => {
                 {/*Dos secciones para el navbat*/}
                 {/*Left side */}
                 <div className="n-logo">
-                <img src="NavBar/LOGO_1.png" alt="LOGO"  />
+                <img src="NavBar/logo.svg" alt="LOGO"  />
                 </div>
 
                 {/*Right side*/}

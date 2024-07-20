@@ -48,7 +48,7 @@
 
 }
 .n-logo img {
-    height: 80px; /* Ajusta esto según la altura deseada */
+    height: 300px; /* Ajusta esto según la altura deseada */
     width: auto; /* Mantiene la proporción de la imagen */
     cursor: pointer;
 }
